@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="Author" description="Bardia">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel='stylesheet' href="style.css">
+        <script src="https://kit.fontawesome.com/54c5409023.js" crossorigin="anonymous"></script>
+        <title> Music Player</title>
+    </head>
+    <body>
+        <div class="container">
+            
+            <div id="music-player">
+            <nav>
+                <div class="circle">
+                    <i class="fa-solid fa-angle-left"></i>
+                </div>
+                <div class="circle" onclick= "showMe()">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                
+            </nav>
+            <img src ="media/fallout.png" id="song-img">
+            <h1 id="music-h1">Set The World On Fire</h1>
+            <p id="music-p">The InkSpot Fallout SoundTrack</p>
+            <audio controls id="song">
+                <source src="media/music.mp3" type="audio/mpeg">
+
+            </audio>
+            <input type="range" value="0" id="progress">
+            
+            
+            <div class="controls">
+                 
+                    <div onclick="goBack()"><i class="fa-solid fa-backward"></i></div>
+                    <!-- onclick are used to carry out a certain function written in js such as 5 seconds
+                     forward 5backward or playPause that either plays it or pauses it -->
+                    <div onclick="playPause()"><i class="fa-solid fa-play" id="cntrlIcon"></i></div>
+                    <div onclick="goForward()" ><i class="fa-solid fa-forward"></i></div>
+                
+            </div>
+
+            </div>
+            <div id="edit-Container">
+                <div class="circlee"onclick="showmee()">
+                    <!-- onclick here is used to go back and come from music-player and edit-menu -->
+                    <i class="fa-solid fa-angle-left"></i>
+                </div>
+        <label for="newsong">Change Song</label>
+        <input type = "file" accept="audio/*" id="newsong">
+        <label for="newpic">Change Picture</label>
+        <input type = "file" accept="pictures/*" id="newpic">
+            
+        </div>
+
+
+
+
+
+
+
+
+
+        <script src="app.js"></script>
+    </body>
+    
+</html>
